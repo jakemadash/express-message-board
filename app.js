@@ -1,5 +1,6 @@
 const express = require('express')
 const path = require('node:path')
+const port = process.env.PORT || 3002;
 
 const app = express()
 
@@ -29,5 +30,4 @@ app.post('/new', (req, res) => {
 }
 )
 
-const PORT = 3002
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
+app.listen(port, () => console.log(`Listening on port ${port}`))
